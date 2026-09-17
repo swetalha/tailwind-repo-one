@@ -9,8 +9,10 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-400: oklch(82.8% 0.189 84.429);
+    --color-violet-100: oklch(94.3% 0.029 294.588);
     --color-violet-200: oklch(89.4% 0.057 293.283);
     --color-violet-600: oklch(54.1% 0.281 293.009);
+    --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-semibold: 600;
     --radius-md: 0.375rem;
@@ -278,6 +280,14 @@
   @media (width >= 48rem) {
     .md\:block {
       display: block;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    .dark\:bg-violet-100 {
+      background-color: var(--color-violet-100);
+    }
+    .dark\:text-white {
+      color: var(--color-white);
     }
   }
 }
